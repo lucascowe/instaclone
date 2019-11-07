@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">instaclone</string>
+    <string name="parse_app_id">c72b204c9bc99dda381e5baead2ee2bee37b6426</string>
+    <string name="parse_client_key">5d507e7ab9719c9d65b5b59d1c75fa58fdfd6285</string>
+    <string name="parse_server">http://18.188.99.203:80/parse/</string>
+</resources>

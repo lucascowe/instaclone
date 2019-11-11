@@ -1,7 +1,9 @@
 package toocowe.`fun`.instaclone
 
 import android.annotation.SuppressLint
+import android.app.Application
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -25,6 +27,7 @@ class MainActivity : AppCompatActivity(), View.OnKeyListener, OnClickListener {
                 if (user != null) {
                     Log.i("success","user ${user.username} logged in")
                     Toast.makeText(this,"You are logged in!",Toast.LENGTH_SHORT)
+                    loadFriendsList()
                 } else {
                     Log.e("login","failed to log in")
                     Toast.makeText(this,"Log in failed",Toast.LENGTH_SHORT)
@@ -43,12 +46,20 @@ class MainActivity : AppCompatActivity(), View.OnKeyListener, OnClickListener {
             signUpInBackground { e ->
                 if (e == null) {
                     Log.i("success", "user ${user.username} created")
+                    Toast.makeText(applicationContext,"User ${user.username} created",Toast.LENGTH_SHORT)
+                    userLogin()
                 } else {
                     e.printStackTrace()
-                    Log.e("signup", "failed to log in")
+                    Log.e("signup", "failed to create user")
+                    Toast.makeText(applicationContext,"You are logged in!",Toast.LENGTH_SHORT)
                 }
             }
         }
+    }
+
+    fun loadFriendsList() {
+        val intent = Intent(applicationContext, FriendsListActivity::class.java)
+        startActivity(intent)
     }
 
     override fun onClick(view: View) {
@@ -105,6 +116,4 @@ class MainActivity : AppCompatActivity(), View.OnKeyListener, OnClickListener {
         ParseAnalytics.trackAppOpenedInBackground(intent)
         Log.i("onCreate","complete")
     }
-
-
 }

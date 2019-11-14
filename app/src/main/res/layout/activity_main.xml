@@ -2,54 +2,50 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/backgroundLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/backgroundLayout"
     tools:context=".MainActivity">
+
 
     <EditText
         android:id="@+id/editTextUser"
-        android:hint="username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="106dp"
         android:layout_marginLeft="50dp"
+        android:layout_marginTop="24dp"
         android:layout_marginRight="50dp"
+        android:hint="username"
         android:text="luca"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
-
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <EditText
         android:id="@+id/editTextPass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="50dp"
+        android:layout_marginTop="8dp"
         android:layout_marginRight="50dp"
-        android:layout_marginTop="106dp"
         android:hint="password"
         android:inputType="textPassword"
         android:text="luca"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.112" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextUser" />
 
     <TableRow
+        android:id="@+id/tableRow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPass"
-        app:layout_constraintVertical_bias="0.083">
+        app:layout_constraintTop_toBottomOf="@+id/editTextPass">
 
         <Button
             android:id="@+id/button"
@@ -71,5 +67,16 @@
             tools:layout_editor_absoluteX="73dp"
             tools:layout_editor_absoluteY="208dp" />
     </TableRow>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="132dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/editTextUser"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toEndOf="@+id/editTextUser"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/instaclone" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

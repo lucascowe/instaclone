@@ -7,7 +7,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.row.view.*
 
-class RecAdapter(private val friends: ArrayList<String>, private val mRecListener: RecListener): RecyclerView.Adapter<RecAdapter.CustomViewHolder>() {
+class RecAdapter(private val friends: ArrayList<String>, private val mRecListener: RecListener):
+    RecyclerView.Adapter<RecAdapter.CustomViewHolder>() {
 
     override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
         holder.view.tvHeader.text = friends[position]

@@ -4,6 +4,8 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:name=".SetupParse"
@@ -14,7 +16,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".FriendsListActivity"></activity>
+        <activity android:name=".UserFeedActivity"></activity>
+        <activity android:name=".FriendsListActivity" />
 
         <meta-data
             android:name="toocowe.fun.APP_ID"
